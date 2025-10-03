@@ -1,0 +1,38 @@
+Sistema de gerenciamento Camisetas de time
+Menu 
+    1.Cadastro(Camisetas)
+    2.Vendas (Camisetas)
+    3.Pesquisar
+    4.Estoque    
+    5.Login
+
+1. Cadastro
+    Entrada das Camisetas
+        ° Marcas 
+            Time
+                Modelo de camisa
+                    tamanhos 
+                    quantidade
+
+2.Vendas
+    Saida das Camisetas
+        Quantas foram vendidas
+            Quais foram as marcas
+                Qual time 
+                    Qual Modelo 
+                    Qual tamanho
+
+3.Pesquisar
+
+4.Estoque  
+    Apresentar totalidade de Camisetas
+        quantidade da marca em especifico 
+            quantidade do time em especifico
+                quantidade do modelo 
+                quantidade do tamanho
+
+5.Login
+    Email/matricula 
+    senha
+            
+
