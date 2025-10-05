@@ -10,6 +10,7 @@ def CadastroCamisa(): #Define a função para cadastro das camisas.
         # Solicita os dados da camisa
         Tamanho = input(f'Cadastre o tamanho da camisa (P, M, G, GG) para o modelo {Modelo}: ')
         Cor = input(f'Cadastre a cor da camisa para o modelo {Modelo}: ')
+        Codigo= int(input(f'Cadastre um codigo para a camisa {Modelo}: '))
         # Converte a quantidade para número inteiro para garantir que é um número.
         try:
             Quantidade= int(input(f'Cadastre a quantidade de camisas para o modelo {Modelo}: '))
@@ -20,7 +21,8 @@ def CadastroCamisa(): #Define a função para cadastro das camisas.
         detalhes_camisa = {
             'Tamanho': Tamanho,
             'Cor': Cor,
-            'Quantidade': Quantidade
+            'Quantidade': Quantidade,
+            'Codigo': Codigo
         }
         # Adiciona o novo dicionário ao dicionário principal, usando o modelo como chave
         TableCamisas[Modelo] = detalhes_camisa
