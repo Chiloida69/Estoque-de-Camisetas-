@@ -1,12 +1,13 @@
 Sistema de gerenciamento Camisetas de time
 Menu 
-    1.Cadastro(Camisetas)
+    1.Cadastro(Camisetas/Clientes)
     2.Vendas (Camisetas)
     3.Pesquisar
     4.Estoque    
     5.Login
 
 1. Cadastro
+    Clientes
     Entrada das Camisetas
         ° Marcas 
             Time
