@@ -8,7 +8,7 @@ Menu
 
 1. Cadastro
     Entrada das Camisetas
-        ° Marcas 
+        Marcas 
             Time
                 Modelo de camisa
                     tamanhos 
