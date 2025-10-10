@@ -1,5 +1,5 @@
 import CadastroCamisa
-def CadastroEquipe(Cadastro): #Define a função para cadastro dos equipe para dentro das marcas.
+def CadastroEquipe(): #Define a função para cadastro dos equipe para dentro das marcas.
     
     while True: #Loop infinito para manter o menu ativo até o usuário decidir sair.
         print("\nSelecione a marca para cadastrar a equipe:")
@@ -17,7 +17,7 @@ def CadastroEquipe(Cadastro): #Define a função para cadastro dos equipe para d
             print('1 - Barcelona')
             print('2 - Brasil')
             print('3 - Corinthians')
-            print('4 - Ineter de Milão')
+            print('4 - Inter de Milão')
             print('5 - Paris Saint-Germain')
             print('6 - Voltar ao menu anterior')
             Escolha=input("Digite o número do time: ")
@@ -101,4 +101,4 @@ def CadastroEquipe(Cadastro): #Define a função para cadastro dos equipe para d
             print ("Seleção inválida. Tente novamente.")
         
 
-CadastroEquipe(1)       
+ 
