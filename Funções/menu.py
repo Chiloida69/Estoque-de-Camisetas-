@@ -1,6 +1,7 @@
 import Cadastro_Clientes
 import CadastroCamisa
 import CadastroEquipe
+import json
 
 # Função para o submenu de cadastro
 def menu_cadastro():
@@ -14,8 +15,11 @@ def menu_cadastro():
         opcao_cadastro = input("Escolha uma opção: ")
         
         if opcao_cadastro == '1':
+            CadastroEquipe.CadastroEquipe() # Mantém chamada da função de equipe
             print("CADASTRAR CAMISA")
-            CadastroEquipe.CadastroEquipe()
+            camisas = CadastroCamisa.CadastroCamisa()  # Cadastra as camisas
+            CadastroCamisa.salvar_camisas(camisas)     # Salva no JSON
+            
         elif opcao_cadastro == '2':
             print("CADASTRAR CLIENTE")
             Cadastro_Clientes.Cadastro_Clientes()
