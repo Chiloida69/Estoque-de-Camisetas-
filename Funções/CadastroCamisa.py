@@ -1,7 +1,7 @@
 import json
-
-def CadastroCamisa(): #Define a função para cadastro das camisas.
-    TableCamisas = {} #Cria um dicionário vazio para armazenar as camisas cadastradas.
+import CadastroEquipe
+def CadastroCamisa(Marca , time): #Define a função para cadastro das camisas.
+    TableCamisas = carregar_camisas() # Carrega as camisas existentes (ou um dicionário vazio se o arquivo não existir)
     print("Função de cadastro de camisas chamada.") #Mensagem para indicar que a função foi chamada.
       # Loop para permitir o cadastro de várias camisas
     while True:
@@ -24,7 +24,10 @@ def CadastroCamisa(): #Define a função para cadastro das camisas.
             'Tamanho': Tamanho,
             'Cor': Cor,
             'Quantidade': Quantidade,
-            'Codigo': Codigo
+            'Codigo': Codigo,
+            'Marca': Marca  # Adiciona o time e a marca ao cadastro
+            ,'Time': time 
+            
             
         }
         # Adiciona o novo dicionário ao dicionário principal, usando o modelo como chave
@@ -37,7 +40,8 @@ def CadastroCamisa(): #Define a função para cadastro das camisas.
     
     return TableCamisas #Retorna o dicionário com as camisas cadastradas.
 
-def salvar_camisas(table_camisas, nome_arquivo="camisas.json"):
+def salvar_camisas(table_camisas, nome_arquivo="camisas.json"): #SALVA O DICIONÁRIO EM UM ARQUIVO JSON para poder chamalo dps 
+    
     with open(nome_arquivo, "w", encoding="utf-8") as f:
         json.dump(table_camisas, f, ensure_ascii=False, indent=4)
     print(f"Camisas salvas em {nome_arquivo}.")

@@ -10,7 +10,9 @@ def pesquisa():
     print("2 - Pesquisar por cor")
     print("3 - Pesquisar por tamanho")
     print("4 - Pesquisar por código")
-    print("5 - Pesquisar por múltiplos requisitos")
+    print("5 - Pesquiar po marca")
+    print("6 - Pesquisar por time")
+    print("7 - Pesquisar por múltiplos requisitos")
     print("0 - Sair")
     # Inicia um loop para manter o menu ativo até o usuário decidir sair
     while True:
@@ -37,15 +39,36 @@ def pesquisa():
             table_camisas = CadastroCamisa.carregar_camisas()  # Chama a função que retorna o dicionário de camisas cadastradas
             # Chamada CORRETA para a função de pesquisa
             CadastroCamisa.pesquisar_camisas(table_camisas, termo, campo='Tamanho')
+        
         # Pesquisa por código
         elif opcao == '4':
             termo = input("Digite o código: ")  # Recebe o termo de pesquisa
             table_camisas = CadastroCamisa.carregar_camisas()  # Chama a função que retorna o dicionário de camisas cadastradas
             # Chamada CORRETA para a função de pesquisa
             CadastroCamisa.pesquisar_camisas(table_camisas, termo, campo='Codigo')
-        # Pesquisa por múltiplos requisitos
-        # Pesquisa por múltiplos requisitos (OPÇÃO 7 - FILTRO COMPLETO)
+        
+        # Pesquisa por marca
         elif opcao == '5':
+            termo = input("Digite a marca (Nike, Adidas, Puma): ")  # Recebe o termo de pesquisa
+            table_camisas = CadastroCamisa.carregar_camisas()  # Chama a função que retorna o dicionário de camisas cadastradas
+            # Chamada CORRETA para a função de pesquisa
+            CadastroCamisa.pesquisar_camisas(table_camisas, termo, campo='Marca')
+            
+        # Pesquisa por time
+        elif opcao == '6':
+            termo = input("Digite o time (Barcelona, Brasil, Corinthians, Inter de Milão, Paris Saint-Germain, Alemanha, Arsenal, Real Madrid, Manchester United, Juventus, Bahia, Borussia Dortmund, Manchester City, Milan, Valencia): ")  # Recebe o termo de pesquisa
+            table_camisas = CadastroCamisa.carregar_camisas()  # Chama a função que retorna o dicionário de camisas cadastradas
+            # Chamada CORRETA para a função de pesquisa
+            CadastroCamisa.pesquisar_camisas(table_camisas, termo, campo='Time')         
+        
+        # Opção para sair do menu de pesquisa
+        elif opcao == '0':
+            print("Saindo do menu de pesquisa.")
+            break
+        
+                # Pesquisa por múltiplos requisitos
+        # Pesquisa por múltiplos requisitos (OPÇÃO 7 - FILTRO COMPLETO)
+        elif opcao == '7':
             modelo = input("Modelo (ou Enter para ignorar): ")
             cor = input("Cor (ou Enter para ignorar): ")
             tamanho = input("Tamanho (ou Enter para ignorar): ")
@@ -98,6 +121,7 @@ def pesquisa():
                 print("\nResultados da pesquisa por múltiplos requisitos:")
                 for item in resultados:
                     print(item)
+                    input("Pressione Enter para continuar...")  
             else:
                 print("\nNenhum resultado encontrado para os filtros especificados.")
                 

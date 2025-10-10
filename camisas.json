@@ -1,9 +1,11 @@
 {
-    "2025": {
-        "Modelo": "2025",
+    "Jogador II 2025": {
+        "Modelo": "Jogador I 2025",
         "Tamanho": "M",
-        "Cor": "Preta",
-        "Quantidade": 2,
-        "Codigo": 1
+        "Cor": "Branca",
+        "Quantidade": 10,
+        "Codigo": 132,
+        "Marca": "Nike",
+        "Time": "Corinthians"
     }
 }
