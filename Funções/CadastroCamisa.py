@@ -37,7 +37,8 @@ def CadastroCamisa(): #Define a função para cadastro das camisas.
     
     return TableCamisas #Retorna o dicionário com as camisas cadastradas.
 
-def salvar_camisas(table_camisas, nome_arquivo="camisas.json"):
+def salvar_camisas(table_camisas, nome_arquivo="camisas.json"): #SALVA O DICIONÁRIO EM UM ARQUIVO JSON para poder chamalo dps 
+    
     with open(nome_arquivo, "w", encoding="utf-8") as f:
         json.dump(table_camisas, f, ensure_ascii=False, indent=4)
     print(f"Camisas salvas em {nome_arquivo}.")
