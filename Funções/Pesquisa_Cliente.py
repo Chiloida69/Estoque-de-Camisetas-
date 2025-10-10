@@ -7,11 +7,12 @@ def Pesquisa_Cliente():
     # Exibe as opções de pesquisa disponíveis
     print("1 - Pesquisar por nome")
     print("2 - Pesquisar por CPF/CNPJ")
+    print("3 - Pesquisar todos os clientes")
     print("0 - Sair")
     # Inicia um loop para manter o menu ativo até o usuário decidir sair  
     while True:
         # Solicita ao usuáro que escolha a opção desejada
-        opcao = input("Escolha uma opção (1, 2 ou 0): ")
+        opcao = input("Escolha uma opção (1, 2 ,  ou 0): ")
         # Se a opção for '0', sai do loop e encerra a função
         if opcao == '0':
             print("Saindo do menu de pesquisa.")
@@ -24,6 +25,15 @@ def Pesquisa_Cliente():
         elif opcao == '2':    
             termo = input("Digite o CPF/CNPJ do cliente para pesquisar: ")
             Cadastro_Clientes.pesquisar_clientes( termo, campo='Chave')  # Chama a função de pesquisa
+            
+        # Se a opção for '3', exibe todos os clientes
+        elif opcao == '3':
+                print("Exibindo todos os clientes cadastrados:")
+                clientes = Cadastro_Clientes.carregar_clientes()  # Carrega todos os clientes
+                if clientes:    
+                    for cliente in clientes:
+                        print(cliente)  # Exibe cada cliente   
+            
         # Se a opção for inválida, exibe uma mensagem de erro e volta ao início
         else:
             print("Opção inválida. Tente novamente.")
