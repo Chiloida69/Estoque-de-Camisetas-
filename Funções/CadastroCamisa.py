@@ -27,5 +27,3 @@ def CadastroCamisa(): #Define a função para cadastro das camisas.
         # Adiciona o novo dicionário ao dicionário principal, usando o modelo como chave
         TableCamisas[Modelo] = detalhes_camisa
         print(f"Camisa '{Modelo}' cadastrada com sucesso!") #Mensagem de confirmação de cadastro.
-    # Retorna o dicionário com todas as camisas cadastradas
-    return TableCamisas

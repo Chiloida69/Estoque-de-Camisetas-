@@ -19,4 +19,3 @@ def Cadastro_Clientes():# Função para cadastrar clientes
     
     print("Cliente cadastrado com sucesso!")
     print(cliente)
-Cadastro_Clientes() # Chama a função para cadastrar clientes
