@@ -17,7 +17,7 @@ def menu_cadastro():
         if opcao_cadastro == '1':
             CadastroEquipe.CadastroEquipe() # Mantém chamada da função de equipe
             print("CADASTRAR CAMISA")
-            camisas = CadastroCamisa.CadastroCamisa()  # Cadastra as camisas
+            qcamisas = CadastroCamisa.CadastroCamisa()  # Cadastra as camisas
             CadastroCamisa.salvar_camisas(camisas)     # Salva no JSON
             
         elif opcao_cadastro == '2':
