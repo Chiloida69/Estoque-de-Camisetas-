@@ -1,6 +1,7 @@
 import Cadastro_Clientes
 import CadastroEquipe
 import Pesquisa
+import Pesquisa_Cliente
 # Função para o submenu de cadastro
 def menu_cadastro():
     #submenu de cadastro
@@ -36,7 +37,7 @@ def menu_pesquisa():
         
         if opcao_pesquisa == '1':
             print("PESQUISISAR CLIENTE")
-            break
+            Pesquisa_Cliente.Pesquisa_Cliente()
         elif opcao_pesquisa == '2':
             print("PESQUISAR CAMISA")
             Pesquisa.pesquisa()
