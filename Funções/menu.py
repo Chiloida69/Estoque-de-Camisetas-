@@ -2,6 +2,8 @@ import Cadastro_Clientes
 import CadastroEquipe
 import Pesquisa
 import Pesquisa_Cliente
+import vendas
+import estoque
 # Função para o submenu de cadastro
 def menu_cadastro():
     #submenu de cadastro
@@ -13,7 +15,7 @@ def menu_cadastro():
         
         opcao_cadastro = input("Escolha uma opção: ")
         
-        if opcao_cadastro == '1':
+        if opcao_cadastro == '1': #Selção para opção de cadastro de camisas
             print("CADASTRAR CAMISA")
             CadastroEquipe.CadastroEquipe()
         elif opcao_cadastro == '2':
@@ -57,7 +59,6 @@ def menu_principal():
         print("2 - Vendas")
         print("3 - Pesquisar")
         print("4 - Estoque")
-        print("5 - Login")
         print("0 - Sair")
         
         opcao = input("Escolha uma opção: ")
@@ -65,22 +66,28 @@ def menu_principal():
         if opcao == '1':
             menu_cadastro()
         elif opcao == '2':
+            vendas.menu_vendas()
             print("VENDAS")
 
         elif opcao == '3':
             menu_pesquisa()
         elif opcao == '4':
-            print("ESTOQUE")
-
-        elif opcao == '5':
-            print("LOGIN")
+            print("1 - Ver Estoque")
+            print("0 - Voltar ao Menu Principal")
+            if input("Escolha uma opção: ") == '1':        
+                estoque.estoque()
+            elif input == '0':
+                print("Voltando ao menu principal")
+                break
+            else: print("Opção incorreta! Tente outra vez.")    
 
         elif opcao == '0':
             print("Saindo...")
+            
             break
         else:
             print("Opção incorreta! Por favor, escolha uma opção do menu.")
 
 
 # Inicia o programa chamando a função do menu principal
-menu_principal()
+#menu_principal()

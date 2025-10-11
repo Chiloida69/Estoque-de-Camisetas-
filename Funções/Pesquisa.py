@@ -66,6 +66,7 @@ def pesquisa():
         elif opcao == '0':
             print("Saindo do menu de pesquisa.")
             break
+        
         # Pesquisa o total de camisas em estoque 
         elif opcao == '7': 
             table_camisas = CadastroCamisa.carregar_camisas()  # Chama a função que retorna o dicionário de camisas cadastradas
@@ -73,10 +74,10 @@ def pesquisa():
             print(f"\nTotal de camisas em estoque: {total_estoque}") 
             print("Detalhes do estoque:")
             for modelo, detalhes in table_camisas.items():  
-                print(f"Modelo: {modelo}, Quantidade: {detalhes.get('Quantidade', 0)}")
+                print(f"Modelo:  {modelo}, Quantidade: {detalhes.get('Quantidade', 0)}")
         
                 # Pesquisa por múltiplos requisitos
-        # Pesquisa por múltiplos requisitos (OPÇÃO 7 - FILTRO COMPLETO)
+        # Pesquisa por múltiplos requisitos (OPÇÃO 8 - FILTRO COMPLETO)
         elif opcao == '8':
             modelo = input("Modelo (ou Enter para ignorar): ")
             cor = input("Cor (ou Enter para ignorar): ")

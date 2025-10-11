@@ -12,7 +12,7 @@ def Pesquisa_Cliente():
     # Inicia um loop para manter o menu ativo até o usuário decidir sair  
     while True:
         # Solicita ao usuáro que escolha a opção desejada
-        opcao = input("Escolha uma opção (1, 2 ,  ou 0): ")
+        opcao = input("Escolha uma opção (1, 2 , 3 ou 0): ")
         # Se a opção for '0', sai do loop e encerra a função
         if opcao == '0':
             print("Saindo do menu de pesquisa.")

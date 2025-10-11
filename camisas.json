@@ -3,7 +3,7 @@
         "Modelo": "Jogador I 2025",
         "Tamanho": "M",
         "Cor": "Branca",
-        "Quantidade": 10,
+        "Quantidade": 8,
         "Codigo": 132,
         "Marca": "Nike",
         "Time": "Corinthians"
@@ -16,5 +16,32 @@
         "Codigo": 231,
         "Marca": "Adidas",
         "Time": "Real Madrid"
+    },
+    "Jogador I 2021": {
+        "Modelo": "Jogador I 2021",
+        "Tamanho": "GG",
+        "Cor": "Azul",
+        "Quantidade": 5,
+        "Codigo": 3321,
+        "Marca": "Puma",
+        "Time": "Manchester City"
+    },
+    "Goleiro II 2025": {
+        "Modelo": "Goleiro II 2025",
+        "Tamanho": "M",
+        "Cor": "Laranja",
+        "Quantidade": 5,
+        "Codigo": 2546,
+        "Marca": "Nike",
+        "Time": "Corinthians"
+    },
+    "Jogador III 2019": {
+        "Modelo": "Jogador III 2019",
+        "Tamanho": "P",
+        "Cor": "Verde",
+        "Quantidade": 10,
+        "Codigo": 3219,
+        "Marca": "Puma",
+        "Time": "Borussia Dortmund"
     }
 }
