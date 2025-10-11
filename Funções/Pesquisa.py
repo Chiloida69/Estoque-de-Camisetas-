@@ -12,7 +12,8 @@ def pesquisa():
     print("4 - Pesquisar por código")
     print("5 - Pesquiar po marca")
     print("6 - Pesquisar por time")
-    print("7 - Pesquisar por múltiplos requisitos")
+    print("7 - Pesquisar o total de camisas em estoque")
+    print("8 - Pesquisar por múltiplos requisitos")
     print("0 - Sair")
     # Inicia um loop para manter o menu ativo até o usuário decidir sair
     while True:
@@ -66,9 +67,18 @@ def pesquisa():
             print("Saindo do menu de pesquisa.")
             break
         
+        # Pesquisa o total de camisas em estoque 
+        elif opcao == '7': 
+            table_camisas = CadastroCamisa.carregar_camisas()  # Chama a função que retorna o dicionário de camisas cadastradas
+            total_estoque = sum(detalhes.get('Quantidade', 0) for detalhes in table_camisas.values())
+            print(f"\nTotal de camisas em estoque: {total_estoque}") 
+            print("Detalhes do estoque:")
+            for modelo, detalhes in table_camisas.items():  
+                print(f"Modelo:  {modelo}, Quantidade: {detalhes.get('Quantidade', 0)}")
+        
                 # Pesquisa por múltiplos requisitos
-        # Pesquisa por múltiplos requisitos (OPÇÃO 7 - FILTRO COMPLETO)
-        elif opcao == '7':
+        # Pesquisa por múltiplos requisitos (OPÇÃO 8 - FILTRO COMPLETO)
+        elif opcao == '8':
             modelo = input("Modelo (ou Enter para ignorar): ")
             cor = input("Cor (ou Enter para ignorar): ")
             tamanho = input("Tamanho (ou Enter para ignorar): ")
